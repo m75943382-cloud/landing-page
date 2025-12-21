@@ -47,7 +47,14 @@
                 <div class="hero-cta">
                     <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="hero_button">ابدأ أسبوعك المجاني
                         الآن</a>
-                    <p class="small-note" data-i18n="hero_note">بدون بطاقة ائتمان</p>
+                    <p class="small-note text-muted mt-2" data-i18n="hero_note">بدون بطاقة ائتمان</p>
+                </div>
+
+                <!-- Trust Badge -->
+                <div class="trust-badge mt-4">
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        <span style="color: var(--primary-yellow);">★</span> يثق بنا أكثر من <strong>2000 طبيب</strong>
+                    </p>
                 </div>
             </div>
             <div class="hero-media">
@@ -73,16 +80,21 @@
                 <h2 data-i18n="pain_title">غالبًا بتعيش السيناريو ده يوميًا</h2>
             </div>
             <div class="cards-grid">
-                <div class="card pain-card">
+                <!-- Problems (Red) -->
+                <div class="card card-problem">
+                    <div class="icon">❌</div>
                     <p data-i18n="pain_1">تصحى على شيفت</p>
                 </div>
-                <div class="card pain-card">
+                <div class="card card-problem">
+                    <div class="icon">❌</div>
                     <p data-i18n="pain_2">ترجع مرهق</p>
                 </div>
-                <div class="card pain-card">
+                <div class="card card-problem">
+                    <div class="icon">❌</div>
                     <p data-i18n="pain_3">تفتح PDF وتقفله بعد 10 دقايق</p>
                 </div>
-                <div class="card pain-card alert">
+                <div class="card card-problem">
+                    <div class="icon">❌</div>
                     <p data-i18n="pain_4">وتحس بالذنب إنك “مقصّر”</p>
                 </div>
             </div>
@@ -95,7 +107,7 @@
     </section>
 
     <!-- The Shift (Scene 4) -->
-    <section class="section shift-section bg-light">
+    <section class="section shift-section">
         <div class="container">
             <h2 class="section-title text-center" data-i18n="shift_title">طب لو المذاكرة اتبنت على حياتك… مش العكس؟</h2>
             <div class="shift-grid">
@@ -124,7 +136,7 @@
             </div>
             <div class="col-media">
                 <div class="phone-mockup">
-                    <img src="assets/images/screenshots/Screenshot-home.jpg" alt="App Home Screen">
+                    <img src="assets/images/screenshots/Screenshot-home.jpg" alt="Bardi App Interface">
                 </div>
             </div>
         </div>
@@ -188,6 +200,36 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="faq_title">الأسئلة الشائعة</h2>
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>هل التطبيق مجاني؟</summary>
+                    <p>نعم، الأسبوع الأول مجاني بالكامل بدون الحاجة لبطاقة ائتمان. بعد ذلك يمكنك الاشتراك للوصول الكامل.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>هل الأسئلة مطابقة لنظام الامتحان الحقيقي؟</summary>
+                    <p>نعم، بنك الأسئلة مصمم ليحاكي نظام الامتحان الحقيقي (100 سؤال / 150 دقيقة).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>كم عدد الأسئلة المتوفرة؟</summary>
+                    <p>لدينا أكثر من 11,000 سؤال مع شروحات تفصيلية ويتم تحديثها بشكل مستمر.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>هل يمكنني استخدام التطبيق على أكثر من جهاز؟</summary>
+                    <p>نعم، يمكنك تسجيل الدخول من أي جهاز والوصول لحسابك وتقدمك.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>كيف يمكنني التواصل مع الدعم؟</summary>
+                    <p>يمكنك التواصل معنا عبر WhatsApp أو Telegram الموجودين في الصفحة.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer / CTA (Scene 7) -->
     <footer class="footer section text-center" id="pricing">
         <div class="container">
@@ -205,13 +247,33 @@
 
             <div class="final-cta-wrapper">
                 <br>
-                <a href="#" class="btn btn-primary btn-xl pulse-anim" data-i18n="final_btn">ابدأ أسبوعك المجاني الآن</a>
-                <p class="safe-text" data-i18n="final_note">بدون فيزا - بدون مخاطرة</p>
+                <a href="#pricing" class="btn btn-primary btn-xl pulse-anim" data-i18n="final_btn">ابدأ أسبوعك المجاني
+                    الآن</a>
+                <p class="safe-text mt-3" data-i18n="final_note">بدون فيزا - بدون مخاطرة</p>
 
                 <div class="store-buttons">
-                    <a href="#" class="store-btn">App Store</a>
-                    <a href="#" class="store-btn">Google Play</a>
-                    <a href="#" class="store-btn">AppGallery</a>
+                    <a href="https://testflight.apple.com/join/Std3CMs1" target="_blank" class="store-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        TestFlight (iOS)
+                    </a>
+                    <a href="https://global.app.mi.com/details?lo=ID&la=en_US&id=com.bardi.learners" target="_blank"
+                        class="store-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.523 2H6.477C5.662 2 5 2.662 5 3.477v17.046C5 21.338 5.662 22 6.477 22h11.046c.815 0 1.477-.662 1.477-1.477V3.477C19 2.662 18.338 2 17.523 2zM12 20c-.829 0-1.5-.671-1.5-1.5s.671-1.5 1.5-1.5 1.5.671 1.5 1.5-.671 1.5-1.5 1.5zm4.5-4h-9V5h9v11z" />
+                        </svg>
+                        Xiaomi Store
+                    </a>
+                    <a href="https://github.com/nadaEzzat/releases/releases/download/1.0.15/Bardi.Learners.v1.0.15.apk"
+                        class="store-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Direct APK
+                    </a>
                 </div>
             </div>
 

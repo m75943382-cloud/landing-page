@@ -105,31 +105,31 @@ window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
         navbar.style.background = 'rgba(17, 17, 24, 0.98)';
-        navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+        navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
     } else {
-        navbar.style.background = 'rgba(17, 17, 24, 0.8)';
+        navbar.style.background = 'rgba(17, 17, 24, 0.9)';
         navbar.style.boxShadow = 'none';
     }
 });
 
 // Animations on Scroll
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('fade-in-up');
+            entry.target.style.opacity = 1; // Ensure visibility
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.card, .feature-card, .shift-item').forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'all 0.6s ease-out';
+document.querySelectorAll('.card, .feature-card, .shift-item, .phone-mockup, .hero-content').forEach(el => {
+    el.classList.add('fade-in-up'); // Determine initial state via CSS
+    el.style.opacity = 0; // Force hidden initially via JS to avoid FOUC
     observer.observe(el);
 });

@@ -1,10 +1,22 @@
 :root {
-    --primary-yellow: rgb(247, 169, 19);
-    --primary-yellow-hover: rgb(227, 149, 9);
-    --deep-night: rgb(17, 17, 24);
+    /* Dark Theme Palette */
+    --primary-yellow: #EAB308;
+    --primary-yellow-hover: #CA8A04;
+    --deep-night: #111118;
+    --card-bg: #1a1a24;
     --text-light: #F5F5F7;
     --text-muted: #9CA3AF;
     --white: #FFFFFF;
+
+    /* Problem/Solution Colors */
+    --problem-red-bg: rgba(220, 38, 38, 0.1);
+    --problem-red-border: rgba(220, 38, 38, 0.3);
+    --problem-red-text: #FCA5A5;
+
+    --solution-green-bg: rgba(5, 150, 105, 0.1);
+    --solution-green-border: rgba(5, 150, 105, 0.3);
+    --solution-green-text: #6EE7B7;
+
     --radius-s: 8px;
     --radius-m: 16px;
     --radius-l: 24px;
@@ -25,8 +37,9 @@ html {
 body {
     font-family: var(--font-ar);
     background-color: var(--deep-night);
-    color: var(--white);
-    line-height: 1.6;
+    color: var(--text-light);
+    line-height: 1.8;
+    /* Increased line-height for "clean" feel */
     overflow-x: hidden;
 }
 
@@ -55,6 +68,16 @@ html[lang="en"] body {
 
 .mt-5 {
     margin-top: 3rem;
+}
+
+.bg-light {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bg-dark {
+    background-color: #0d0d12;
+    color: var(--white);
 }
 
 /* Buttons */
@@ -101,16 +124,15 @@ html[lang="en"] body {
 
 /* Navbar */
 .navbar {
-    padding: 20px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(17, 17, 24, 0.85);
-    /* More transparent */
+    background: rgba(17, 17, 24, 0.9);
     backdrop-filter: blur(15px);
-    /* Stronger blur */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .navbar .container {
@@ -131,10 +153,10 @@ html[lang="en"] body {
 }
 
 .logo-text {
-    height: 24px;
+    height: 28px;
     width: auto;
     filter: brightness(0) invert(1);
-    /* Turn black text to white */
+    /* White in Dark Mode */
 }
 
 .nav-actions {
@@ -146,40 +168,36 @@ html[lang="en"] body {
 /* Hero Section */
 .hero {
     padding-top: 160px;
-    /* More space */
     padding-bottom: 100px;
     position: relative;
     overflow: hidden;
     min-height: 90vh;
+    /* Keep full height feel */
     display: flex;
     align-items: center;
+    background: radial-gradient(circle at 100% 0%, rgba(234, 179, 8, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(74, 74, 138, 0.1) 0%, transparent 40%);
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(247, 169, 19, 0.05), transparent 70%);
-    z-index: -1;
+    display: none;
 }
 
 .hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    /* More gap */
     align-items: center;
 }
 
 .hero h1 {
     font-size: 3.5rem;
+    font-weight: 800;
+    /* Extra bold like reference */
     line-height: 1.2;
     margin-bottom: 24px;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    /* Readability */
+    color: var(--white);
+    /* No text-shadow for clean look */
 }
 
 .hero .highlight {
@@ -194,14 +212,14 @@ html[lang="en"] body {
     bottom: 5px;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: rgba(247, 169, 19, 0.2);
+    height: 12px;
+    background: rgba(234, 179, 8, 0.2);
     z-index: -1;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
     margin-bottom: 40px;
     max-width: 90%;
@@ -255,43 +273,52 @@ html[lang="en"] body {
     padding: 100px 0;
 }
 
+/* Problem & Solution Cards */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 40px 30px;
+    padding: 30px 24px;
     border-radius: var(--radius-m);
     text-align: center;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
 }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, var(--primary-yellow), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
+/* Specific Style: Problem (Red) */
+.card-problem {
+    background-color: var(--problem-red-bg);
+    border-color: var(--problem-red-border);
+    color: var(--problem-red-text);
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.card-problem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.2);
 }
 
-.card:hover::before {
-    opacity: 1;
+/* Specific Style: Solution (Green) */
+.card-solution {
+    background-color: var(--solution-green-bg);
+    border-color: var(--solution-green-border);
+    color: var(--solution-green-text);
+}
+
+.card-solution:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.2);
+}
+
+/* Typography inside cards */
+.card p {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 .card .icon {
@@ -344,8 +371,8 @@ html[lang="en"] body {
 }
 
 .bg-light {
-    background-color: var(--text-light);
-    color: var(--deep-night);
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .shift-grid {
@@ -388,19 +415,40 @@ html[lang="en"] body {
     align-items: center;
 }
 
+/* Phone Mockup (CSS Only) */
 .phone-mockup {
     position: relative;
     width: 300px;
+    height: 600px;
     margin: 0 auto;
-    border: 8px solid #333;
+    border: 12px solid #1F2937;
+    /* Dark Bezels */
     border-radius: 40px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 2px #374151;
+    /* Shadow + Outer Ring */
     background: #000;
+}
+
+/* Notch */
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 25px;
+    background: #1F2937;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 10;
 }
 
 .phone-mockup img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -457,20 +505,41 @@ html[lang="en"] body {
     flex-direction: row-reverse;
 }
 
+/* Phone Frame for Feature Images */
 .f-image {
     flex: 1;
     position: relative;
-    max-width: 300px;
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 560px;
     margin: 0 auto;
-    border: 6px solid #222;
-    border-radius: 35px;
+    border: 10px solid #1F2937;
+    border-radius: 36px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 2px #374151;
     background: #000;
+}
+
+/* Notch for Feature Images */
+.f-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 22px;
+    background: #1F2937;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
 }
 
 .f-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.5s;
 }
@@ -523,13 +592,21 @@ html[dir="ltr"] .f-content {
 }
 
 /* Footer */
+.footer {
+    background-color: #0F172A;
+    /* Deep Navy */
+    color: var(--white);
+    padding: 80px 0 40px;
+}
+
 .decision-box {
-    background: linear-gradient(145deg, #1e1e2d, #161621);
+    background: rgba(255, 255, 255, 0.05);
+    /* Slight glass on dark */
     padding: 50px;
     border-radius: var(--radius-l);
     margin: 50px auto;
     max-width: 800px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .check-list {
@@ -579,17 +656,24 @@ html[dir="ltr"] .check-list li::before {
 }
 
 .store-btn {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: var(--radius-s);
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .store-btn:hover {
-    background: white;
-    color: black;
+    background: var(--white);
+    color: var(--text-dark);
+    border-color: var(--white);
+    transform: translateY(-2px);
 }
 
 /* Socials & Footer Logo */
@@ -714,3 +798,97 @@ html[dir="rtl"] .whatsapp-btn {
     height: 300px;
     background: #4a4a8a;
 }
+
+/* FAQ Section */
+.faq-section {
+    padding: 100px 0;
+    background: var(--card-bg);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-m);
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(234, 179, 8, 0.2);
+}
+
+.faq-item summary {
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--primary-yellow);
+    transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    padding: 0 25px 20px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+/* Stagger delays */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* In-view checks usually need JS, but we can set default animation for now or use IntersectionObserver later. 
+   For this streamlined version, we will apply animation classes directly where needed. 
+*/
