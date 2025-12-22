@@ -17,7 +17,9 @@ const translations = {
         guilt_title: "المشكلة مش فيك",
         guilt_text: "معظم طرق التحضير معمولة لناس متفرغة.. لكن إنت طبيب شغال، مسؤول، ووقتك مسروق.<br>طبيعي تحس إنك تايه لو بتذاكر بنفس الأدوات الغلط.",
         shift_title: "طب لو المذاكرة اتبنت على حياتك… مش العكس؟",
-        shift_bad: "مش محتاج 4 ساعات متواصلة",
+        compare_old_tag: "الطريقة القديمة",
+        compare_new_tag: "مع بردي",
+        shift_bad: "تحتاج 4 ساعات متواصلة من التركيز (المستحيل توفيرها)",
         shift_good: "شرح يغطي 3-5 صفحات أكاديمية في <strong>10 دقائق</strong>",
         solution_title: "كورس بردي – زمالة الطب النفسي",
         solution_desc: "تطبيق واحد يجمع كل ما تحتاجه.",
@@ -55,12 +57,14 @@ const translations = {
         store_xiaomi: "Xiaomi Store",
         store_apk: "Direct APK",
         copyright: "&copy; 2025 Bardi. جميع الحقوق محفوظة.",
-        label_huawei: "تحميل مباشر",
-        label_xiaomi: "من شاومي ستور",
-        label_ios: "للايفون",
+        label_huawei: "لهواتف هواوي",
+        label_xiaomi: "لهواتف شاومي",
+        label_ios: "لهواتف آيفون",
         btn_huawei: "حمل من AppGallery",
         btn_xiaomi: "Xiaomi Store",
         btn_ios: "TestFlight",
+        dl_card_free: "مجـــــــانا اول اسبوع",
+        dl_card_title: "حمل التطبيق وابدا الان",
         popup_title: "إعداد TestFlight",
         popup_step1: "أولاً: قم بتحميل تطبيق TestFlight من متجر أبل",
         popup_step1_btn: "تحميل TestFlight",
@@ -85,7 +89,9 @@ const translations = {
         guilt_title: "It's Not Your Fault",
         guilt_text: "Most prep methods are for people who are free, full-time students... But you are a working doctor, responsible, and your time is stolen.<br>It's normal to feel lost using the wrong tools.",
         shift_title: "What if studying was built around your life... not the opposite?",
-        shift_bad: "You don't need 4 continuous hours",
+        compare_old_tag: "Old Way",
+        compare_new_tag: "With Bardi",
+        shift_bad: "Requiring 4 continuous hours of focus (almost impossible)",
         shift_good: "Explanation covering 3-5 academic pages in <strong>10 minutes</strong>",
         solution_title: "Bardi Course – Psychiatry Fellowship",
         solution_desc: "One app gathering everything you need.",
@@ -123,12 +129,14 @@ const translations = {
         store_xiaomi: "Xiaomi Store",
         store_apk: "Direct APK",
         copyright: "&copy; 2025 Bardi. All rights reserved.",
-        label_huawei: "Direct Download",
-        label_xiaomi: "From Xiaomi Store",
+        label_huawei: "For Huawei",
+        label_xiaomi: "For Xiaomi",
         label_ios: "For iPhone",
         btn_huawei: "Get on AppGallery",
         btn_xiaomi: "Xiaomi Store",
         btn_ios: "TestFlight",
+        dl_card_free: "FREE FIRST WEEK",
+        dl_card_title: "Download the App & Start Now",
         popup_title: "TestFlight Setup",
         popup_step1: "Step 1: Download TestFlight from App Store",
         popup_step1_btn: "Download TestFlight",
@@ -154,18 +162,18 @@ langToggleBtn.addEventListener('click', () => {
 
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('mobile-menu');
-const navMenu = document.querySelector('.nav-menu');
+const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
 menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    navMenuWrapper.classList.toggle('active');
 });
 
 // Close menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+        navMenuWrapper.classList.remove('active');
     });
 });
 
