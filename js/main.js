@@ -60,6 +60,8 @@ const translations = {
         label_huawei: "لهواتف هواوي",
         label_xiaomi: "لهواتف شاومي",
         label_ios: "لهواتف آيفون",
+        nav_download: "حمل التطبيق",
+        floating_cta: "ابدأ مجاناً وحمل التطبيق",
         btn_huawei: "حمل من AppGallery",
         btn_xiaomi: "Xiaomi Store",
         btn_ios: "TestFlight",
@@ -132,6 +134,8 @@ const translations = {
         label_huawei: "For Huawei",
         label_xiaomi: "For Xiaomi",
         label_ios: "For iPhone",
+        nav_download: "Download App",
+        floating_cta: "Start Free & Download",
         btn_huawei: "Get on AppGallery",
         btn_xiaomi: "Xiaomi Store",
         btn_ios: "TestFlight",
@@ -253,3 +257,25 @@ popup.addEventListener('click', (e) => {
         popup.classList.remove('active');
     }
 });
+// Floating CTA Visibility Logic
+const floatingCta = document.getElementById('floating-cta');
+const heroSection = document.getElementById('home');
+
+const floatingObserverOptions = {
+    root: null,
+    threshold: 0.5 // Show as soon as 50% of hero is gone
+};
+
+const floatingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            floatingCta.classList.remove('visible');
+        } else {
+            floatingCta.classList.add('visible');
+        }
+    });
+}, floatingObserverOptions);
+
+if (heroSection && floatingCta) {
+    floatingObserver.observe(heroSection);
+}

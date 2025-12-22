@@ -38,6 +38,8 @@
                 </ul>
             </div>
             <div class="nav-actions">
+                <a href="#hero-download-card" class="btn btn-primary btn-sm nav-cta-btn" data-i18n="nav_download">حمل
+                    التطبيق</a>
                 <button id="lang-toggle" class="btn-text">English</button>
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
@@ -56,7 +58,7 @@
                         class="highlight">بدون أن تحترق.</span></h1>
                 <p class="hero-subtitle" data-i18n="hero_subtitle">خلّينا نكون واقعيين.. مفيش وقت.. مفيش طاقة..<br>والـ
                     textbooks أكبر من اليوم نفسه.<br><strong>ومع ذلك… الامتحان جاي.</strong></p>
-                <div class="download-card">
+                <div class="download-card" id="hero-download-card">
                     <div class="dl-card-badge" data-i18n="dl_card_free">مجـــــــانا اول اسبوع</div>
                     <h3 class="dl-card-title" data-i18n="dl_card_title">حمل التطبيق وابدا الان</h3>
                     <div class="cta-wrapper">
@@ -416,6 +418,19 @@
             </div>
         </div>
     </div>
+
+    <!-- Floating CTA -->
+    <a href="#hero-download-card" class="floating-cta" id="floating-cta">
+        <span class="cta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+        </span>
+        <span class="cta-text" data-i18n="floating_cta">ابدأ مجاناً وحمل التطبيق</span>
+    </a>
 
     <script src="js/main.js"></script>
 </body>
