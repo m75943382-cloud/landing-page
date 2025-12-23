@@ -80,6 +80,19 @@ html[lang="en"] body {
     color: var(--white);
 }
 
+/* Section Titles - Always Visible */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 40px;
+    opacity: 1 !important;
+}
+
+.section {
+    opacity: 1 !important;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -351,15 +364,16 @@ html[lang="en"] body {
 }
 
 /* Hero Video - Allow glow effect to show */
+/* Hero Video - Allow glow effect to show */
 .video-wrapper {
     position: relative;
-    border-radius: 0;
+    border-radius: 0 !important;
     /* Let phone-mockup handle this */
     overflow: visible;
     /* Allow glow effect to show */
-    box-shadow: none;
+    box-shadow: none !important;
     /* Let phone-mockup handle this */
-    border: none;
+    border: none !important;
     /* Let phone-mockup handle this */
     max-width: 350px;
     margin: 0 auto;
@@ -375,72 +389,116 @@ html[lang="en"] body {
     display: block;
 }
 
-/* Pain Points */
-.pain-points {
-    padding: 100px 0;
+/* Platform Stats (Scene 2) */
+.platform-stats {
+    padding: 80px 0;
 }
 
-/* Problem & Solution Cards */
-.cards-grid {
+.stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
 }
 
-.card {
-    padding: 30px 24px;
+.stat-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-m);
+    padding: 40px 20px;
     text-align: center;
-    transition: all 0.3s ease;
-    border: 2.5px solid rgba(255, 255, 255, 0.15);
-    background: var(--card-bg);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Specific Style: Problem (Red) */
-.card-problem {
-    background-color: var(--problem-red-bg);
-    border-color: var(--problem-red-border);
-    color: var(--problem-red-text);
-}
-
-.card-problem:hover {
+.stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-yellow);
 }
 
-/* Specific Style: Solution (Green) */
-.card-solution {
-    background-color: var(--solution-green-bg);
-    border-color: var(--solution-green-border);
-    color: var(--solution-green-text);
-}
-
-.card-solution:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.2);
-}
-
-/* Typography inside cards */
-.card p {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-.card .icon {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
     color: var(--primary-yellow);
-    background: rgba(247, 169, 19, 0.1);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-family: var(--font-en);
+    /* Using Inter for numbers */
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+/* Syllabus Section */
+.syllabus-section {
+    padding: 80px 0;
+    background: #0d0d12;
+}
+
+.syllabus-container {
+    max-width: 900px;
+    margin: 40px auto 0;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-l);
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    /* Custom Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-yellow) rgba(255, 255, 255, 0.05);
+}
+
+.syllabus-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.syllabus-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.syllabus-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-yellow);
+    border-radius: 10px;
+}
+
+.syllabus-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.syllabus-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px 20px;
+    border-radius: var(--radius-s);
+    color: var(--text-muted);
+    font-family: var(--font-en);
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.syllabus-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    border-left-color: var(--primary-yellow);
+    padding-left: 25px;
+}
+
+html[dir="rtl"] .syllabus-item {
+    border-left: none;
+    border-right: 3px solid transparent;
+}
+
+html[dir="rtl"] .syllabus-item:hover {
+    padding-left: 20px;
+    padding-right: 25px;
+    border-right-color: var(--primary-yellow);
 }
 
 /* Message Box (Guilt Section) */
@@ -477,10 +535,7 @@ html[lang="en"] body {
     padding: 80px 0;
 }
 
-.bg-light {
-    background-color: var(--card-bg);
-    border: 2.5px solid rgba(255, 255, 255, 0.12);
-}
+
 
 .comparison-container {
     display: flex;
@@ -1165,41 +1220,45 @@ html[dir="ltr"] .check-list li::before {
     font-weight: 800;
 }
 
-/* Premium Store Buttons */
+/* Premium Store Buttons - Grid Layout */
 .cta-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
     margin-top: 40px;
-    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .cta-label {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--primary-yellow);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .store-btn-premium {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 24px;
+    padding: 14px 20px;
     border-radius: 12px;
     text-decoration: none;
     color: white;
     font-weight: 700;
-    font-size: 1rem;
-    min-width: 200px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -1255,6 +1314,16 @@ html[dir="ltr"] .check-list li::before {
     box-shadow: 0 10px 25px rgba(0, 102, 204, 0.4);
 }
 
+/* Direct APK Button */
+.btn-apk {
+    background: linear-gradient(135deg, #00C853, #1B5E20);
+    border-color: #00E676;
+}
+
+.btn-apk:hover {
+    box-shadow: 0 10px 25px rgba(0, 200, 83, 0.4);
+}
+
 /* Mobile Responsiveness for Buttons */
 @media (max-width: 768px) {
     .cta-wrapper {
@@ -1305,6 +1374,95 @@ html[dir="ltr"] .check-list li::before {
     transform: scale(0.9);
     transition: all 0.3s ease;
     position: relative;
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+/* Plans UI */
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-m);
+    padding: 20px;
+    width: 140px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+.plan-name {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    line-height: 1;
+}
+
+.price-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: var(--font-en);
+}
+
+.price-currency {
+    font-size: 0.9rem;
+    color: var(--primary-yellow);
+    margin-top: 2px;
+}
+
+.plan-period {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* Featured Plan (Yearly) */
+.plan-featured {
+    border-color: var(--primary-yellow);
+    background: linear-gradient(145deg, rgba(234, 179, 8, 0.15), rgba(234, 179, 8, 0.05));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.plan-featured:hover {
+    transform: scale(1.05) translateY(-3px);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-yellow);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
 }
 
 .popup-overlay.active .popup-content {
@@ -1498,8 +1656,9 @@ html[dir="rtl"] .whatsapp-btn {
         font-size: 1.5rem;
     }
 
-    .cards-grid {
-        grid-template-columns: 1fr 1fr;
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
@@ -1905,5 +2064,537 @@ body {
 
     .sol-f-text strong {
         font-size: 1.1rem;
+    }
+}
+
+/* =========================================
+   New Section Styles (Content Review Update)
+   ========================================= */
+
+/* 1. Pain Point Section */
+.pain-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--deep-night), #15151c);
+    position: relative;
+}
+
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pain-card {
+    background: rgba(239, 68, 68, 0.03);
+    /* Slight red tint */
+    border: 1px solid rgba(239, 68, 68, 0.1);
+    padding: 30px;
+    border-radius: var(--radius-m);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.pain-card:hover {
+    background: rgba(239, 68, 68, 0.08);
+    transform: translateY(-5px);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.pain-text {
+    font-size: 1.25rem;
+    color: #FCA5A5;
+    /* Light red text */
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 2. Value Proposition Section */
+.value-prop-section {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.02));
+    border-top: 1px solid rgba(234, 179, 8, 0.15);
+    border-bottom: 1px solid rgba(234, 179, 8, 0.15);
+}
+
+.value-title {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+}
+
+.value-desc {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-yellow);
+    margin-top: 10px;
+}
+
+/* 3. What You Get Section - Enhanced */
+.wyg-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: visible;
+}
+
+.wyg-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-l);
+    padding: 50px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.wyg-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(234, 179, 8, 0.2);
+}
+
+/* Alternate Direction */
+.wyg-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.wyg-content {
+    flex: 1;
+    z-index: 10;
+    position: relative;
+}
+
+.wyg-media {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Phone Mockup with PNG Frame (No Tilt) */
+.phone-frame {
+    width: 300px;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    background: url('../assets/images/vecteezy_smartphone-and-mobile-phone_11047536.png') no-repeat center center;
+    background-size: contain;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 auto;
+}
+
+.phone-frame:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Screen container inside the frame */
+.phone-frame img,
+.phone-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Subtle Glass Shine Effect - Triggers on Scroll */
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    bottom: 10px;
+    border-radius: 40px;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(105deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.08) 45%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.08) 55%,
+            rgba(255, 255, 255, 0) 70%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.phone-frame.shine-active::after {
+    opacity: 1;
+    animation: shineOnScroll 1.5s ease-out forwards;
+}
+
+@keyframes shineOnScroll {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+
+.wyg-content h3 {
+    font-size: 2.2rem;
+    color: var(--primary-yellow);
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    opacity: 1 !important;
+}
+
+.wyg-content h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-yellow);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.wyg-desc {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    opacity: 1 !important;
+}
+
+.wyg-content {
+    opacity: 1 !important;
+}
+
+/* 4. How It Works Section */
+.hiw-section {
+    padding: 100px 0;
+    background: #0d0d12;
+    position: relative;
+}
+
+.hiw-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+    counter-reset: step;
+    position: relative;
+    z-index: 2;
+}
+
+.hiw-step {
+    background: linear-gradient(145deg, #1a1a20, #131318);
+    padding: 40px 30px;
+    border-radius: var(--radius-m);
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.hiw-step:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-yellow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hiw-step-num {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-yellow);
+    color: var(--deep-night);
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 1.8rem;
+    box-shadow: 0 0 25px rgba(234, 179, 8, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+.hiw-text {
+    font-size: 1.1rem;
+    color: var(--white);
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+
+/* 5. Pricing Section - Refined for "Premium" Look */
+.pricing-section {
+    padding: 100px 0;
+    background: var(--deep-night);
+    position: relative;
+}
+
+.pricing-header-box {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.02));
+    border: 1px solid rgba(234, 179, 8, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-free-title {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 15px;
+    font-weight: 800;
+    opacity: 1 !important;
+}
+
+.pricing-free-desc {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    opacity: 1 !important;
+}
+
+.plans-label {
+    margin-bottom: 30px;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    opacity: 1 !important;
+}
+
+/* Plans Container Grid */
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 260px;
+    max-width: 320px;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.plan-featured {
+    background: linear-gradient(145deg, rgba(234, 179, 8, 0.1), rgba(20, 20, 20, 1));
+    border: 2px solid var(--primary-yellow);
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(234, 179, 8, 0.1);
+}
+
+.plan-featured:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(234, 179, 8, 0.15);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-yellow);
+    color: #000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(234, 179, 8, 0.3);
+    white-space: nowrap;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 15px;
+    opacity: 1 !important;
+}
+
+.plan-price {
+    margin-bottom: 10px;
+}
+
+.plan-price .price-value {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 600;
+    opacity: 1 !important;
+    line-height: 1.4;
+}
+
+.pricing-reassurance {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.reassurance-item {
+    font-size: 1rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+}
+
+.reassurance-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(234, 179, 8, 0.3);
+    transform: translateY(-2px);
+}
+
+.reassurance-item svg {
+    color: var(--primary-yellow);
+    flex-shrink: 0;
+}
+
+.reassurance-item strong {
+    color: var(--white);
+}
+
+/* 6. Pain Points Improved */
+.pain-card {
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    /* ... rest same ... */
+}
+
+/* 6. Hero Quick Points */
+.hero-points {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-points li {
+    font-size: 1.1rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.hero-points li::before {
+    content: '✨';
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .wyg-item {
+        flex-direction: column;
+        /* Stack on mobile */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .wyg-item.reverse {
+        flex-direction: column;
+        /* Keep stacked same order, or usually Image Top? */
+    }
+
+    /* If we want image first on mobile for visual interest */
+    .wyg-item .wyg-media {
+        order: -1;
+    }
+
+    .wyg-content h3::after {
+        margin-left: auto;
+        margin-right: auto;
+        /* Center underline */
+    }
+
+    .plans-container {
+        grid-template-columns: 1fr;
+        /* Stack plans */
+        gap: 40px;
+    }
+
+    .plan-featured {
+        transform: scale(1);
+        /* Reset scale */
+        order: -1;
+        /* Show featured first? Optional */
+    }
+
+    .hiw-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-header-box {
+        padding: 30px 20px;
+    }
+
+    .value-title {
+        font-size: 1.4rem;
+    }
+
+    .value-desc {
+        font-size: 1.6rem;
     }
 }

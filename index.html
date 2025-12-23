@@ -5,6 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bardi - Psychiatry Fellowship Course</title>
+    <link rel="icon" href="assets/images/logo-image.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qbank.bardimed.com/">
+    <meta property="og:title" content="Bardi - Psychiatry Fellowship Course">
+    <meta property="og:description" content="Prepare for Psychiatry Fellowship while working full-time.">
+    <meta property="og:image" content="assets/images/screenshots/Screenshot-home.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qbank.bardimed.com/">
+    <meta property="twitter:title" content="Bardi - Psychiatry Fellowship Course">
+    <meta property="twitter:description" content="Prepare for Psychiatry Fellowship while working full-time.">
+    <meta property="twitter:image" content="assets/images/screenshots/Screenshot-home.jpg">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +33,44 @@
 
     <!-- Meta -->
     <meta name="description" content="Prepare for Psychiatry Fellowship while working full-time.">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "upipke3rqp");
+    </script>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8GBYMDTLG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-M8GBYMDTLG');
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1401454941612680');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1401454941612680&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel -->
 </head>
 
 <body>
@@ -26,14 +79,16 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo-icon.png" alt="Bardi Icon" class="logo-icon">
-                <img src="assets/images/logo-text.svg" alt="Bardi Text" class="logo-text">
+                <img src="assets/images/logo-image.png" alt="Bardi Icon" class="logo-icon">
+                <img src="assets/images/logo-text.png" alt="Bardi Text" class="logo-text">
             </div>
             <div class="nav-menu-wrapper">
                 <ul class="nav-menu">
                     <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
-                    <li><a href="#problem" data-i18n="nav_problem">المشكلة</a></li>
-                    <li><a href="#features" data-i18n="nav_features">المميزات</a></li>
+                    <li><a href="#pain" data-i18n="nav_problem">المشكلة</a></li>
+                    <li><a href="#wyg" data-i18n="nav_content">محتوى الكورس</a></li>
+                    <li><a href="#how-it-works" data-i18n="nav_how_it_works">كيف يعمل</a></li>
+                    <li><a href="#pricing" data-i18n="nav_pricing">الأسعار</a></li>
                     <li><a href="#faq" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
                 </ul>
             </div>
@@ -54,20 +109,29 @@
     <header class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1 data-i18n="hero_title">استعد لزمالة الطب النفسي<br>وأنت على رأس العمل..<br><span
-                        class="highlight">بدون أن تحترق.</span></h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">خلّينا نكون واقعيين.. مفيش وقت.. مفيش طاقة..<br>والـ
-                    textbooks أكبر من اليوم نفسه.<br><strong>ومع ذلك… الامتحان جاي.</strong></p>
+                <h1 data-i18n="hero_title">استعد لزمالة الطب النفسي…<br>وأنت في بريكات الشيفت</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">فيديوهات مبسطة ومركزة + <strong>بنك أسئلة</strong>
+                    يحاكي الامتحان<br>+ خطة مذاكرة يومية قصيرة.<br>علشان تذاكر بثقة… من غير توهّان في التيكست بوك.</p>
+
+                <!-- Quick Points -->
+                <ul class="hero-points">
+                    <li data-i18n="hero_points_1">20–30 دقيقة يوميًا معدل مذاكرة مفيد وخفيف</li>
+                    <li data-i18n="hero_points_2">حل منتظم بدل ما تتوه بين ورق الأسئلة</li>
+                    <li data-i18n="hero_points_3">متابعة تقدمك عشان تعرف أنت ضعيف فى ايه</li>
+                </ul>
+
                 <div class="download-card" id="hero-download-card">
                     <div class="dl-card-badge" data-i18n="dl_card_free">مجـــــــانا اول اسبوع</div>
-                    <h3 class="dl-card-title" data-i18n="dl_card_title">حمل التطبيق وابدا الان</h3>
+                    <h3 class="dl-card-title" data-i18n="hero_button">ابدأ أسبوعك المجاني الآن</h3>
+                    <p class="text-center text-muted mb-3" data-i18n="hero_note" style="font-size: 0.9rem;">بدون بطاقة
+                        ائتمان</p>
                     <div class="cta-wrapper">
                         <!-- Huawei -->
                         <div class="cta-item">
                             <span class="cta-label" data-i18n="label_huawei">لهواتف هواوي</span>
                             <a href="https://appgallery.huawei.com/#/app/C116047511" target="_blank"
                                 class="store-btn-premium btn-huawei">
-                                <img src="assets/images/Huawei AppGallery.png" alt="AppGallery">
+                                <img src="assets/images/Huawei AppGallery.png" alt="AppGallery" loading="lazy">
                                 <span data-i18n="btn_huawei">حمل من AppGallery</span>
                             </a>
                         </div>
@@ -77,7 +141,7 @@
                             <span class="cta-label" data-i18n="label_xiaomi">لهواتف شاومي</span>
                             <a href="https://global.app.mi.com/details?lo=ID&la=en_US&id=com.bardi.learners"
                                 target="_blank" class="store-btn-premium btn-xiaomi">
-                                <img src="assets/images/xiaomi getapps logo.png" alt="Xiaomi">
+                                <img src="assets/images/xiaomi getapps logo.png" alt="Xiaomi" loading="lazy">
                                 <span data-i18n="btn_xiaomi">Xiaomi Store</span>
                             </a>
                         </div>
@@ -93,23 +157,34 @@
                                 <span data-i18n="btn_ios">TestFlight</span>
                             </a>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Trust Badge -->
-                <div class="trust-badge mt-4">
-                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="trust_text">
-                        <span style="color: var(--primary-yellow);">★</span> يثق بنا أكثر من <strong>2000 طبيب</strong>
-                    </p>
+                        <!-- Direct APK -->
+                        <div class="cta-item">
+                            <span class="cta-label" data-i18n="label_apk">تحميل مباشر</span>
+                            <a href="https://github.com/nadaEzzat/releases/releases/download/v1.0.18/Bardi.Learners_v1.0.18.apk"
+                                class="store-btn-premium btn-apk">
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                                </svg>
+                                <span data-i18n="btn_apk"></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="hero-media">
-                <div class="video-wrapper phone-mockup">
-                    <!-- Autoplay, Muted, Loop Video -->
+                <div class="video-wrapper phone-frame">
                     <video autoplay muted loop playsinline poster="assets/images/screenshots/video course.jpg">
                         <source src="assets/videos/teaser.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                </div>
+            </div>
+
+            <!-- Authority Bar -->
+            <div class="authority-bar" style="grid-column: 1 / -1; width: 100%;">
+                <div class="logos">
+                    <span class="auth-text" data-i18n="trust_text"></span>
                 </div>
             </div>
         </div>
@@ -119,48 +194,124 @@
         <div class="shape shape-2"></div>
     </header>
 
-    <!-- Pain Points (Scene 2 & 3) -->
-    <section class="section pain-points" id="problem">
+    <!-- Platform Stats (Scene 2) -->
+    <section class="section platform-stats" id="stats">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 data-i18n="pain_title">غالبًا بتعيش السيناريو ده يوميًا</h2>
-            </div>
-            <div class="cards-grid">
-                <!-- Problems (Red) -->
-                <div class="card card-problem">
-                    <div class="icon">❌</div>
-                    <p data-i18n="pain_1">تصحى على شيفت</p>
+            <div class="stats-grid">
+                <!-- Stat 1 -->
+                <div class="stat-card">
+                    <div class="stat-number" data-target="30000" data-suffix="+">30000+</div>
+                    <div class="stat-label"><span data-i18n="stat_students">بيذاكر من خلال التطبيق</span> <br> <span
+                            data-i18n="stat_students_count" style="font-size: 0.9em; opacity: 0.8;">30 الف متعلم
+                            طبي</span></div>
                 </div>
-                <div class="card card-problem">
-                    <div class="icon">❌</div>
-                    <p data-i18n="pain_2">ترجع مرهق</p>
+                <!-- Stat 2 -->
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1000000" data-suffix="+">1000000+</div>
+                    <div class="stat-label"><span data-i18n="stat_hours">اكتر من مليون ساعة مشاهدة</span> <br> <span
+                            data-i18n="stat_hours_desc" style="font-size: 0.9em; opacity: 0.8;">لمحتوى تعليم طبي فى
+                            2025</span></div>
                 </div>
-                <div class="card card-problem">
-                    <div class="icon">❌</div>
-                    <p data-i18n="pain_3">تفتح PDF وتقفله بعد 10 دقايق</p>
+                <!-- Stat 3 -->
+                <div class="stat-card">
+                    <div class="stat-number" data-target="180000" data-suffix="+">180000+</div>
+                    <div class="stat-label"><span data-i18n="stat_content">اكتر من 180 الف سؤال</span> <br> <span
+                            data-i18n="stat_content_desc" style="font-size: 0.9em; opacity: 0.8;">فى بنوك اسئلة
+                            طبية</span></div>
                 </div>
-                <div class="card card-problem">
-                    <div class="icon">❌</div>
-                    <p data-i18n="pain_4">وتحس بالذنب إنك “مقصّر”</p>
-                </div>
-            </div>
-            <div class="message-box mt-5">
-                <h3 data-i18n="guilt_title">المشكلة مش فيك</h3>
-                <p data-i18n="guilt_text">معظم طرق التحضير معمولة لناس متفرغة.. لكن إنت طبيب شغال، مسؤول، ووقتك
-                    مسروق.<br>طبيعي تحس إنك تايه لو بتذاكر بنفس الأدوات الغلط.</p>
             </div>
         </div>
     </section>
 
-    <!-- The Shift (Scene 4) -->
+    <!-- Pain Section (NEW) -->
+    <section class="section pain-section" id="pain">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="pain_title">هل ده شبهك؟</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <p class="pain-text" data-i18n="pain_1">لو بتفتح التيكست بوك وبتقف قدامه مستتقله</p>
+                </div>
+                <div class="pain-card">
+                    <p class="pain-text" data-i18n="pain_2">لو الشغل مخليك تحس إن مفيش وقت تذاكر للامتحان</p>
+                </div>
+                <div class="pain-card">
+                    <p class="pain-text" data-i18n="pain_3">لو مش عارف تبدأ منين علشان تعدى الامتحان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Prop (NEW) -->
+    <section class="section value-prop-section">
+        <div class="container">
+            <p class="value-title" data-i18n="value_title">في Psychiatry Notes بيحوّل مذاكرة الزمالة من “مجهود عشوائي”
+                إلى <strong>نظام يومي واضح</strong>:</p>
+            <h2 class="value-desc" data-i18n="value_desc">تتفرج صح، تحل صح … تعدي الامتحان .</h2>
+        </div>
+    </section>
+
+    <!-- What You Get Section (NEW / Modified) -->
+    <section class="section wyg-section" id="wyg">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="wyg_title">جوا التطبيق هتلاقي:</h2>
+
+            <!-- Video -->
+            <div class="wyg-item">
+                <div class="wyg-content">
+                    <h3 data-i18n="wyg_video_title">شروحات فيديو</h3>
+                    <p class="wyg-desc" data-i18n="wyg_video_desc">شرح مركز مبسط للكتاب<br>رسومات توضيحية تسهل
+                        المذاكرة<br>شرح الفيديو بشكل نقاشي بين شخصين<br>خلاصة اي موضوع فى ربع ساعة</p>
+                </div>
+                <!-- Added phone-frame wrapper -->
+                <div class="wyg-media">
+                    <div class="phone-frame">
+                        <img src="assets/images/screenshots/video course.jpg" alt="Video Course" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book -->
+            <div class="wyg-item reverse">
+                <div class="wyg-content">
+                    <h3 data-i18n="wyg_book_title">كتاب متكامل</h3>
+                    <p class="wyg-desc" data-i18n="wyg_book_desc">كتاب مصمم على منهج الزمالة المصرية بالزبط<br>مدمج
+                        بالكتاب المعلومات الزايده فى بنوك الاسئلة<br>الكتاب الكترونى علشان تقدر تذاكر من اي حته<br>تقدر
+                        تطلب النسخه الورقيه وتوصلك لحد البيت</p>
+                </div>
+                <div class="wyg-media">
+                    <div class="phone-frame">
+                        <img src="assets/images/screenshots/Egyptian medical License Exam Preparatory qbank.jpg"
+                            alt="Book" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- QBank -->
+            <div class="wyg-item">
+                <div class="wyg-content">
+                    <h3 data-i18n="wyg_qbank_title">بنك اسئلة</h3>
+                    <p class="wyg-desc" data-i18n="wyg_qbank_desc">اهم بنوك الاسئلة اللى بتيجي منها الامتحان<br>الاسئلة
+                        محلولة بتفسير الاجابة الصح والغلط<br>محاكاة للامتحان بشكل كامل وواقعى<br>مراجعة ذكية للاسئلة
+                        اللى حافظها او غلطت فيها<br>تقدر تذاكر بالموضوع وبالشابتر بحيث تدرب واحده واحده</p>
+                </div>
+                <div class="wyg-media">
+                    <div class="phone-frame">
+                        <img src="assets/images/screenshots/Screenshot-home.jpg" alt="QBank" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison (The Shift) (MOVED & UPDATED) -->
     <section class="section shift-section">
         <div class="container">
-            <h2 class="section-title text-center" data-i18n="shift_title">طب لو المذاكرة اتبنت على حياتك… مش العكس؟</h2>
+            <h2 class="section-title text-center" data-i18n="comp_title">مقارنة سريعة</h2>
             <div class="comparison-container">
                 <div class="compare-card compare-old">
-                    <div class="compare-tag" data-i18n="compare_old_tag">الطريقة القديمة</div>
+                    <div class="compare-tag" data-i18n="comp_old_title">الطريقة القديمة</div>
                     <div class="compare-icon">✖️</div>
-                    <p data-i18n="shift_bad">تحتاج 4 ساعات متواصلة من التركيز (المستحيل توفيرها)</p>
+                    <p data-i18n="comp_old_points"></p>
                 </div>
 
                 <div class="compare-divider">
@@ -168,102 +319,103 @@
                 </div>
 
                 <div class="compare-card compare-new">
-                    <div class="compare-tag" data-i18n="compare_new_tag">مع بردي</div>
+                    <div class="compare-tag" data-i18n="comp_new_title">مع Psychiatry Notes</div>
                     <div class="compare-icon">✅</div>
-                    <p data-i18n="shift_good">شرح يغطي 3-5 صفحات أكاديمية في <strong>10 دقائق</strong></p>
+                    <p data-i18n="comp_new_points"></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution / Showcase (Scene 5) -->
-    <section class="section showcase">
-        <div class="container two-col">
-            <div class="col-content">
-                <h2 data-i18n="solution_title">كورس بردي – زمالة الطب النفسي</h2>
-                <p class="lead" data-i18n="solution_desc">تطبيق واحد يجمع كل ما تحتاجه.</p>
-                <div class="feature-card-stack">
-                    <div class="sol-feature-card">
-                        <div class="sol-f-icon">📱</div>
-                        <div class="sol-f-text" data-i18n="sol_feat_1">
-                            <strong>واجهة منظمة:</strong> كل الكورسات في مكان واحد.
-                        </div>
-                    </div>
-                    <div class="sol-feature-card">
-                        <div class="sol-f-icon">🚀</div>
-                        <div class="sol-f-text" data-i18n="sol_feat_2">
-                            <strong>وصول فوري:</strong> حمل وابدأ المذاكرة فوراً.
-                        </div>
-                    </div>
-                    <div class="sol-feature-card">
-                        <div class="sol-f-icon">👨‍⚕️</div>
-                        <div class="sol-f-text" data-i18n="sol_feat_3">
-                            <strong>مصمم للأطباء:</strong> ممارسين، نواب، ووافدين.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-media">
-                <div class="phone-mockup">
-                    <img src="assets/images/screenshots/Screenshot-home.jpg" alt="Bardi App Interface">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Features (Scene 6) -->
-    <section class="section features bg-dark text-white" id="features">
+    <!-- How It Works (NEW) -->
+    <section class="section hiw-section" id="how-it-works">
         <div class="container">
-            <h2 class="section-title text-center text-primary" data-i18n="features_title">أدوات صُممت خصيصًا للطبيب
-                المشغول</h2>
+            <h2 class="section-title text-center" data-i18n="hiw_title">ازاي هتستخدمه؟... في 3 خطوات:</h2>
+            <div class="hiw-steps">
+                <div class="hiw-step">
+                    <div class="hiw-step-num">1</div>
+                    <p class="hiw-text" data-i18n="hiw_step_1"></p>
+                </div>
+                <!-- Arrow? CSS gap implies space, simpler without arrow for now -->
+                <div class="hiw-step">
+                    <div class="hiw-step-num">2</div>
+                    <p class="hiw-text" data-i18n="hiw_step_2"></p>
+                </div>
+                <div class="hiw-step">
+                    <div class="hiw-step-num">3</div>
+                    <p class="hiw-text" data-i18n="hiw_step_3"></p>
+                </div>
+            </div>
 
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="f-image">
-                        <img src="assets/images/screenshots/Egyptian medical License Exam Preparatory qbank.jpg"
-                            alt="QBank">
-                    </div>
-                    <div class="f-content">
-                        <h3 data-i18n="feat_1_title">بنك أسئلة متخصص (QBank)</h3>
-                        <p data-i18n="feat_1_desc">مش مجرد أسئلة عشوائية. تدرب على Egyptian Medical License Exam بنفس
-                            نظام الامتحان الحقيقي.</p>
+            <div class="text-center mt-5">
+                <a href="#hero-download-card" class="btn btn-primary btn-xl" data-i18n="hiw_cta">ابدأ مجانًا الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <!-- Header Box -->
+            <div class="pricing-header-box">
+                <h2 class="pricing-free-title" data-i18n="price_free_title">ابدأ مجانًا</h2>
+                <p class="pricing-free-desc" data-i18n="price_free_desc"></p>
+            </div>
+
+            <!-- Plans Label -->
+            <p class="plans-label" data-i18n="price_subtitle">بعد الأسبوع المجاني (اختار باقتك):</p>
+
+            <!-- Plans Grid -->
+            <div class="plans-container">
+                <!-- Monthly Plan -->
+                <div class="plan-card">
+                    <div class="plan-name" data-i18n="plan_monthly_label">شهري</div>
+                    <div class="plan-price">
+                        <span class="price-value" data-i18n="price_monthly">150 جنيه / شهر</span>
                     </div>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="feature-card reverse">
-                    <div class="f-image">
-                        <img src="assets/images/screenshots/History-Sessions.jpg" alt="History">
-                    </div>
-                    <div class="f-content">
-                        <h3 data-i18n="feat_2_title">تتبع تقدمك (History)</h3>
-                        <p data-i18n="feat_2_desc">لن تضيع في المنتصف. خاصية History تحفظ لك آخر جلسة لتعود بضغطة واحدة.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="f-image">
-                        <img src="assets/images/screenshots/Screenshot_courses content-1.jpg" alt="Modules">
-                    </div>
-                    <div class="f-content">
-                        <h3 data-i18n="feat_3_title">محتوى مكثف ومرتب</h3>
-                        <p data-i18n="feat_3_desc">دروس مقسمة لوحدات صغيرة (Modules) تغطي المنهج بدون حشو.</p>
+                <!-- Yearly Plan (Featured) -->
+                <div class="plan-card plan-featured">
+                    <div class="plan-badge" data-i18n="save_amount_badge">وفر 600 جنيه!</div>
+                    <div class="plan-name" data-i18n="plan_yearly_label">سنوي</div>
+                    <div class="plan-price">
+                        <span class="price-value" data-i18n="price_yearly">1200 جنيه / سنة</span>
+                        <div class="plan-breakdown" data-i18n="yearly_breakdown"
+                            style="font-size: 0.9rem; color: var(--primary-yellow); margin-top: 8px; font-weight: normal;">
+                            يعني الشهر واقف بـ 100 جنيه بس</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Authority -->
-            <div class="authority-bar text-center mt-5">
-                <p class="mb-3 opacity-75" data-i18n="authority_text">بناءً على المراجع المعتمدة:</p>
-                <div class="logos">
-                    <div class="auth-badge">
-                        <span class="book-icon">📚</span>
-                        <span class="auth-name">SPMM</span>
-                    </div>
+            <!-- Reassurance Items -->
+            <div class="pricing-reassurance">
+                <div class="reassurance-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span><strong>إلغاء في أي وقت</strong></span>
                 </div>
+                <div class="reassurance-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span><strong>الدفع آمن</strong></span>
+                </div>
+                <div class="reassurance-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span><strong>الدعم بيرد عليك</strong> بسرعة</span>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-5">
+                <a href="#hero-download-card" class="btn btn-primary btn-lg" data-i18n="final_btn">ابدأ أسبوعك المجاني
+                    الآن</a>
             </div>
         </div>
     </section>
@@ -273,35 +425,43 @@
         <div class="container">
             <h2 class="section-title text-center" data-i18n="faq_title">الأسئلة الشائعة</h2>
             <div class="faq-grid">
+                <!-- Keep desired old FAQs -->
                 <details class="faq-item">
                     <summary data-i18n="faq_1_q">هل التطبيق مجاني؟</summary>
-                    <p data-i18n="faq_1_a">نعم، الأسبوع الأول مجاني بالكامل بدون الحاجة لبطاقة ائتمان. بعد ذلك يمكنك
-                        الاشتراك للوصول الكامل.
-                    </p>
+                    <p data-i18n="faq_1_a"></p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faq_2_q">هل الأسئلة مطابقة لنظام الامتحان الحقيقي؟</summary>
-                    <p data-i18n="faq_2_a">نعم، بنك الأسئلة مصمم ليحاكي نظام الامتحان الحقيقي (100 سؤال / 150 دقيقة).
-                    </p>
+                    <p data-i18n="faq_2_a"></p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faq_3_q">كم عدد الأسئلة المتوفرة؟</summary>
-                    <p data-i18n="faq_3_a">لدينا أكثر من 11,000 سؤال مع شروحات تفصيلية ويتم تحديثها بشكل مستمر.</p>
+                    <p data-i18n="faq_3_a"></p>
                 </details>
-                <details class="faq-item">
-                    <summary data-i18n="faq_4_q">هل يمكنني استخدام التطبيق على أكثر من جهاز؟</summary>
-                    <p data-i18n="faq_4_a">نعم، يمكنك تسجيل الدخول من أي جهاز والوصول لحسابك وتقدمك.</p>
-                </details>
+                <!-- Removed Multi-Device FAQ as requested -->
                 <details class="faq-item">
                     <summary data-i18n="faq_5_q">كيف يمكنني التواصل مع الدعم؟</summary>
-                    <p data-i18n="faq_5_a">يمكنك التواصل معنا عبر WhatsApp أو Telegram الموجودين في الصفحة.</p>
+                    <p data-i18n="faq_5_a"></p>
+                </details>
+                <!-- New FAQs -->
+                <details class="faq-item">
+                    <summary data-i18n="faq_new_1_q">هل المحتوى بديل عن التيكست بوك؟</summary>
+                    <p data-i18n="faq_new_1_a"></p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_new_2_q">مستوى الأسئلة عامل إزاي؟</summary>
+                    <p data-i18n="faq_new_2_a"></p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_new_3_q">هعرف أتتبع تقدمي؟</summary>
+                    <p data-i18n="faq_new_3_a"></p>
                 </details>
             </div>
         </div>
     </section>
 
     <!-- Footer / CTA (Scene 7) -->
-    <footer class="footer section text-center" id="pricing">
+    <footer class="footer section text-center">
         <div class="container">
             <h2 data-i18n="final_title">لو كملت للآخر… غالبًا ده ليك</h2>
             <div class="decision-box">
@@ -316,39 +476,50 @@
             </div>
 
             <div class="final-cta-wrapper">
-                <div class="download-card">
-                    <div class="dl-card-badge" data-i18n="dl_card_free">مجـــــــانا اول اسبوع</div>
-                    <h3 class="dl-card-title" data-i18n="dl_card_title">حمل التطبيق وابدا الان</h3>
-                    <div class="cta-wrapper">
-                        <!-- Huawei -->
-                        <div class="cta-item">
-                            <span class="cta-label" data-i18n="label_huawei">لهواتف هواوي</span>
-                            <a href="https://appgallery.huawei.com/#/app/C116047511" target="_blank"
-                                class="store-btn-premium btn-huawei">
-                                <img src="assets/images/Huawei AppGallery.png" alt="AppGallery">
-                                <span data-i18n="btn_huawei">حمل من AppGallery</span>
-                            </a>
-                        </div>
-                        <!-- Xiaomi -->
-                        <div class="cta-item">
-                            <span class="cta-label" data-i18n="label_xiaomi">لهواتف شاومي</span>
-                            <a href="https://global.app.mi.com/details?lo=ID&la=en_US&id=com.bardi.learners"
-                                target="_blank" class="store-btn-premium btn-xiaomi">
-                                <img src="assets/images/xiaomi getapps logo.png" alt="Xiaomi">
-                                <span data-i18n="btn_xiaomi">Xiaomi Store</span>
-                            </a>
-                        </div>
-                        <!-- iOS -->
-                        <div class="cta-item">
-                            <span class="cta-label" data-i18n="label_ios">لهواتف آيفون</span>
-                            <a href="#" class="store-btn-premium btn-ios" id="ios-btn-footer">
-                                <svg viewBox="0 0 24 24">
-                                    <path
-                                        d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                                </svg>
-                                <span data-i18n="btn_ios">TestFlight</span>
-                            </a>
-                        </div>
+                <div class="guarantee-text mb-4" data-i18n="guarantee_text">اشترك بدون فيزا - الغاء في اي وقت</div>
+                <h3 class="dl-card-title" data-i18n="dl_card_title">حمل التطبيق وابدا الان</h3>
+
+                <!-- CTA Wrapper duplicated for footer for convenience or reuse component -->
+                <div class="cta-wrapper">
+                    <!-- Huawei -->
+                    <div class="cta-item">
+                        <span class="cta-label" data-i18n="label_huawei">لهواتف هواوي</span>
+                        <a href="https://appgallery.huawei.com/#/app/C116047511" target="_blank"
+                            class="store-btn-premium btn-huawei">
+                            <img src="assets/images/Huawei AppGallery.png" alt="AppGallery" loading="lazy">
+                            <span data-i18n="btn_huawei">حمل من AppGallery</span>
+                        </a>
+                    </div>
+                    <!-- Xiaomi -->
+                    <div class="cta-item">
+                        <span class="cta-label" data-i18n="label_xiaomi">لهواتف شاومي</span>
+                        <a href="https://global.app.mi.com/details?lo=ID&la=en_US&id=com.bardi.learners" target="_blank"
+                            class="store-btn-premium btn-xiaomi">
+                            <img src="assets/images/xiaomi getapps logo.png" alt="Xiaomi" loading="lazy">
+                            <span data-i18n="btn_xiaomi">Xiaomi Store</span>
+                        </a>
+                    </div>
+                    <!-- iOS -->
+                    <div class="cta-item">
+                        <span class="cta-label" data-i18n="label_ios">لهواتف آيفون</span>
+                        <a href="#" class="store-btn-premium btn-ios" id="ios-btn-footer">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            <span data-i18n="btn_ios">TestFlight</span>
+                        </a>
+                    </div>
+                    <!-- Direct APK -->
+                    <div class="cta-item">
+                        <span class="cta-label" data-i18n="label_apk"></span>
+                        <a href="https://github.com/nadaEzzat/releases/releases/download/v1.0.18/Bardi.Learners_v1.0.18.apk"
+                            class="store-btn-premium btn-apk">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                            </svg>
+                            <span data-i18n="btn_apk"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -405,7 +576,8 @@
                     <div class="step-num">1</div>
                     <p class="step-text" data-i18n="popup_step1">أولاً: قم بتحميل تطبيق TestFlight من متجر أبل</p>
                     <a href="https://apps.apple.com/us/app/testflight/id899247664" target="_blank"
-                        class="btn-popup btn-blue" data-i18n="popup_step1_btn">تحميل TestFlight</a>
+                        class="btn-popup btn-blue" id="btn-testflight-download" data-i18n="popup_step1_btn">تحميل
+                        TestFlight</a>
                 </div>
 
                 <!-- Step 2 -->
@@ -413,7 +585,7 @@
                     <div class="step-num">2</div>
                     <p class="step-text" data-i18n="popup_step2">ثانياً: انضم للنسخة التجريبية (Beta)</p>
                     <a href="https://testflight.apple.com/join/Std3CMs1" target="_blank" class="btn-popup btn-outline"
-                        data-i18n="popup_step2_btn">الانضمام للنسخة التجريبية</a>
+                        id="btn-app-install" data-i18n="popup_step2_btn">الانضمام للنسخة التجريبية</a>
                 </div>
             </div>
         </div>
