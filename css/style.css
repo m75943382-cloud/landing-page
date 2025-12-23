@@ -2719,3 +2719,106 @@ body {
         font-size: 1.6rem;
     }
 }
+
+/* =========================================
+   SYLLABUS / CONTENT INDEX SECTION
+   ========================================= */
+
+.syllabus-section {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.05), rgba(74, 74, 138, 0.08));
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+.syllabus-title {
+    font-size: 1.8rem;
+    color: var(--primary-yellow);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.syllabus-category {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.syllabus-category:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(234, 179, 8, 0.3);
+    transform: translateY(-3px);
+}
+
+.syllabus-category h4 {
+    color: var(--primary-yellow);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(234, 179, 8, 0.3);
+}
+
+.syllabus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.syllabus-list li {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.syllabus-list li:last-child {
+    border-bottom: none;
+}
+
+.syllabus-list li::before {
+    content: '✓';
+    color: var(--primary-yellow);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .syllabus-section {
+        padding: 25px 15px;
+        margin-top: 40px;
+    }
+
+    .syllabus-title {
+        font-size: 1.4rem;
+    }
+
+    .syllabus-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .syllabus-category {
+        padding: 15px;
+    }
+
+    .syllabus-list li {
+        font-size: 0.85rem;
+        padding: 6px 0;
+    }
+}

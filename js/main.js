@@ -42,6 +42,13 @@ const translations = {
         wyg_book_desc: "كتاب مصمم على منهج الزمالة المصرية بالزبط<br>مدمج بالكتاب المعلومات الزايده فى بنوك الاسئلة<br>الكتاب الكترونى علشان تقدر تذاكر من اي حته<br>تقدر تطلب النسخه الورقيه وتوصلك لحد البيت",
         wyg_qbank_title: "بنك اسئلة",
         wyg_qbank_desc: "اهم بنوك الاسئلة اللى بتيجي منها الامتحان<br>الاسئلة محلولة بتفسير الاجابة الصح والغلط<br>محاكاة للامتحان بشكل كامل وواقعى<br>مراجعة ذكية للاسئلة اللى حافظها او غلطت فيها<br>تقدر تذاكر بالموضوع وبالشابتر بحيث تدرب واحده واحده",
+        // Syllabus
+        syllabus_title: "فهرس المحتوى",
+        syllabus_cat_psychology: "علم النفس",
+        syllabus_cat_development: "التطور البشري",
+        syllabus_cat_neuroscience: "علوم الأعصاب",
+        syllabus_cat_pharmacology: "علم الأدوية",
+        syllabus_cat_clinical: "الفحص السريري",
 
         // Comparison (The Shift)
         comp_title: "مقارنة سريعة",
@@ -129,7 +136,7 @@ const translations = {
         currency_egp: "جنيه",
         label_apk: "تحميل مباشر",
         btn_apk: "تحميل APK",
-        apk_download_msg: "جاري بدء التحميل... يرجى مراجعة قائمة التنزيلات في هاتفك أو شريط الإشعارات."
+        apk_download_msg: "اضغط موافق لبدء تحميل التطبيق مباشرة... وتابعه من خلال شريط الإشعارات في هاتفك."
     },
     en: {
         nav_home: "Home",
@@ -174,6 +181,13 @@ const translations = {
         wyg_book_desc: "Designed exactly for the Egyptian Fellowship curriculum<br>Integrated with extra QBank info<br>Digital book to study from anywhere<br>Order hard copy delivered to your door",
         wyg_qbank_title: "Question Bank",
         wyg_qbank_desc: "Top banks where exams come from<br>Solved with explanations for right and wrong answers<br>Full and realistic exam simulation<br>Smart review for memorized or wrong questions<br>Study by topic and chapter to practice step-by-step",
+        // Syllabus
+        syllabus_title: "Content Index",
+        syllabus_cat_psychology: "Psychology",
+        syllabus_cat_development: "Human Development",
+        syllabus_cat_neuroscience: "Neuroscience",
+        syllabus_cat_pharmacology: "Pharmacology",
+        syllabus_cat_clinical: "Clinical Examination",
 
         // Comparison (The Shift)
         comp_title: "Quick Comparison",
@@ -261,7 +275,7 @@ const translations = {
         currency_egp: "EGP",
         label_apk: "Direct Download",
         btn_apk: "Download APK",
-        apk_download_msg: "Download started... Please check your Downloads list or Notification bar."
+        apk_download_msg: "Press OK to start the download... then check your notification bar or downloads list."
     }
 };
 
@@ -468,10 +482,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Direct APK Download Message
     document.querySelectorAll('.btn-apk').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent immediate navigation
             const currentLang = document.documentElement.getAttribute('lang') || 'ar';
             const msg = translations[currentLang].apk_download_msg;
             alert(msg);
+            // Start download after user clicks OK
+            const downloadUrl = btn.getAttribute('href');
+            if (downloadUrl) {
+                window.location.href = downloadUrl;
+            }
             // Optional: Track Event
             if (typeof trackEvent === 'function') trackEvent('apk', 'Download', 'Direct APK');
         });
