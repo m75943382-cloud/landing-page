@@ -1231,9 +1231,10 @@ html[dir="ltr"] .check-list li::before {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     margin-top: 40px;
-    max-width: 700px;
+    max-width: 760px;
     margin-left: auto;
     margin-right: auto;
+    justify-items: center;
 }
 
 .cta-item {
@@ -1254,18 +1255,18 @@ html[dir="ltr"] .check-list li::before {
 .store-btn-premium {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
     padding: 0 20px;
-    border-radius: 18px;
+    border-radius: 20px;
     text-decoration: none;
     color: white;
     font-weight: 800;
-    font-size: 1.1rem;
-    width: 300px;
+    font-size: 1.25rem;
+    width: 340px;
     /* Fixed width for visual uniformity */
     max-width: 100%;
     /* Responsive safety */
-    height: 80px;
+    height: 90px;
     /* Fixed height for perfect uniformity */
     justify-content: center;
     transition: all 0.3s ease;
@@ -1278,8 +1279,8 @@ html[dir="ltr"] .check-list li::before {
 
 .store-btn-premium svg,
 .store-btn-premium img {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
     fill: currentColor;
     opacity: 0.95;
