@@ -1628,6 +1628,29 @@ html[dir="rtl"] .whatsapp-btn {
     left: 30px;
 }
 
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 80px;
+        /* Position above floating CTA */
+        right: 20px;
+        padding: 10px 16px;
+    }
+
+    html[dir="rtl"] .whatsapp-btn {
+        left: 20px;
+        right: auto;
+    }
+
+    .whatsapp-text {
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero .container {

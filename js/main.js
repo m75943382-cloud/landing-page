@@ -8,6 +8,7 @@ const translations = {
         nav_pricing: "الأسعار",
         nav_faq: "الأسئلة الشائعة",
         nav_cta: "ابدأ أسبوعك المجاني",
+        whatsapp_btn: "للاستفسار",
         hero_title: `استعد لزمالة الطب النفسي…<br>وأنت في بريكات الشيفت`,
         hero_subtitle: `فيديوهات مبسطة ومركزة + <strong>بنك أسئلة</strong> يحاكي الامتحان<br>+ خطة مذاكرة يومية قصيرة.<br>علشان تذاكر بثقة… من غير توهّان في التيكست بوك.`,
         hero_points_1: "20–30 دقيقة يوميًا معدل مذاكرة مفيد وخفيف",
@@ -45,9 +46,9 @@ const translations = {
         // Comparison (The Shift)
         comp_title: "مقارنة سريعة",
         comp_old_title: "الطريقة القديمة",
-        comp_old_points: "بتبدأ بشكل عشوائي -> <strong>توهان</strong><br>مذاكرة كتير بس مش المطلوب -> <strong>وقت بيضيع</strong><br>بحل كتير وبعدين بنسى -> <strong>نفس الغلط بيتكرر</strong>",
+        comp_old_points: "😵 توهان في الكتب<br>⏰ وقت بيضيع في مذاكرة مش مركزة<br>🔁 نفس الأخطاء بتتكرر",
         comp_new_title: "مع Psychiatry Notes",
-        comp_new_points: "كل يوم موضوع جديد<br>تتفرج على فيديو وبعدين تذاكر من الكتاب وبعدين تحل الاسئلة<br>هتعدى الامتحان وانت مرتاح",
+        comp_new_points: "✅ خطة واضحة كل يوم<br>🎯 فيديو → كتاب → أسئلة<br>🎓 تعدي الامتحان بثقة",
 
         // How It Works
         hiw_title: "ازاي هتستخدمه؟... في 3 خطوات:",
@@ -135,6 +136,7 @@ const translations = {
         nav_pricing: "Pricing",
         nav_faq: "FAQ",
         nav_cta: "Start Free Week",
+        whatsapp_btn: "Contact Us",
         hero_title: `Prepare for Psychiatry Fellowship<br>While on Break Shifts`,
         hero_subtitle: `Simplified videos + <strong>Real-exam QBank</strong> + Short daily study plan.<br>Study with confidence... without getting lost in textbooks.`,
         hero_points_1: "20–30 daily minutes, useful and light study rate",
@@ -172,9 +174,9 @@ const translations = {
         // Comparison (The Shift)
         comp_title: "Quick Comparison",
         comp_old_title: "The Old Way",
-        comp_old_points: "Start randomly -> <strong>Lost</strong><br>Study a lot but not what's needed -> <strong>Wasted Time</strong><br>Solve a lot then forget -> <strong>Same Mistakes Repeated</strong>",
+        comp_old_points: "😵 Lost in textbooks<br>⏰ Wasted time on unfocused study<br>🔁 Same mistakes repeated",
         comp_new_title: "With Psychiatry Notes",
-        comp_new_points: "New topic every day<br>Watch video, study book, then solve questions<br>Pass the exam comfortably",
+        comp_new_points: "✅ Clear daily plan<br>🎯 Video → Book → Questions<br>🎓 Pass with confidence",
 
         // How It Works
         hiw_title: "How to use it?... In 3 steps:",
