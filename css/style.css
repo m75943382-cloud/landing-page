@@ -4,8 +4,8 @@
     --primary-yellow-hover: #CA8A04;
     --deep-night: #111118;
     --card-bg: #1a1a24;
-    --text-light: #F5F5F7;
-    --text-muted: #9CA3AF;
+    --text-light: #FFFFFF;
+    --text-muted: #E5E7EB;
     --white: #FFFFFF;
 
     /* Problem/Solution Colors */
@@ -620,8 +620,16 @@ html[dir="rtl"] .compare-new {
     color: var(--deep-night);
 }
 
-.compare-icon {
-    font-size: 3rem;
+.compare-old .compare-icon {
+    color: #ff5252;
+    /* Vivid Red */
+    filter: drop-shadow(0 0 8px rgba(255, 82, 82, 0.3));
+}
+
+.compare-new .compare-icon {
+    color: #4ade80;
+    /* Vivid Green */
+    filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.3));
 }
 
 .compare-card p {
@@ -2953,4 +2961,50 @@ html[dir="ltr"] .wyg-points li::before {
         font-size: 0.85rem;
         padding: 6px 0;
     }
+}
+
+/* CTA Card Support Contact */
+.cta-support-divider {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.cta-support-divider span {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.btn-whatsapp-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-cta:hover {
+    background: #21b858;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+.btn-whatsapp-cta svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
 }

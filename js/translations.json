@@ -30,9 +30,9 @@
         "value_desc": "تتفرج صح + تحل صح = تعدي الامتحان بـثـقـة.",
         "wyg_title": "جوا التطبيق هتلاقي",
         "wyg_video_title": "شروحات فيديو",
-        "wyg_video_desc": "<ul class=\"wyg-points\"><li>شرح مركز مبسط للكتاب</li><li>رسومات توضيحية تسهل المذاكرة</li><li>شرح الفيديو بشكل نقاشي بين شخصين</li><li>خلاصة اي موضوع فى ربع ساعة</li></ul>",
+        "wyg_video_desc": "<ul class=\"wyg-points\"><li>شرح مركز مبسط للكتاب</li><li>رسومات توضيحية تسهل المذاكرة</li><li>أسلوب شرح نقاشي يخليك مركز</li><li>خلاصة اي موضوع فى ربع ساعة</li></ul>",
         "wyg_book_title": "كتاب متكامل",
-        "wyg_book_desc": "<ul class=\"wyg-points\"><li>كتاب مصمم على منهج الزمالة المصرية بالظبط</li><li>مدمج بالكتاب المعلومات الزايده فى بنوك الاسئلة</li><li>الكتاب الكترونى علشان تقدر تذاكر من اي حته</li><li>تقدر تطلب النسخه الورقيه وتوصلك لحد البيت</li></ul>",
+        "wyg_book_desc": "<ul class=\"wyg-points\"><li>كتاب مطابق لمنهج الزمالة المصرية</li><li>مدمج بالكتاب المعلومات الزايده فى بنوك الاسئلة</li><li>الكتاب الكترونى علشان تقدر تذاكر من اي حته</li><li>تقدر تطلب النسخه الورقيه وتوصلك لحد البيت</li></ul>",
         "wyg_qbank_title": "بنك اسئلة",
         "wyg_qbank_desc": "<ul class=\"wyg-points\"><li>اهم بنوك الاسئلة اللى بتيجي منها الامتحان</li><li>الاسئلة محلولة بتفسير الاجابة الصح والغلط</li><li>محاكاة للامتحان بشكل كامل وواقعى</li><li>مراجعة ذكية للاسئلة اللى حافظها او غلطت فيها</li><li>تقدر تذاكر بالموضوع وبالشابتر بحيث تدرب واحده واحده</li></ul>",
         "syllabus_title": "فهرس المحتوى",
@@ -119,7 +119,9 @@
         "currency_egp": "جنيه",
         "label_apk": "تحميل مباشر",
         "btn_apk": "تحميل APK",
-        "apk_download_msg": "اضغط موافق لبدء تحميل التطبيق مباشرة... وتابعه من خلال شريط الإشعارات في هاتفك."
+        "apk_download_msg": "اضغط موافق لبدء تحميل التطبيق مباشرة... وتابعه من خلال شريط الإشعارات في هاتفك.",
+        "cta_support_text": "أو تواصل مع الدعم للتحميل",
+        "btn_whatsapp_cta": "تواصل واتساب"
     },
     "en": {
         "nav_home": "Home",
@@ -152,9 +154,9 @@
         "value_desc": "Watch right, solve right... Pass the exam.",
         "wyg_title": "What's inside the App",
         "wyg_video_title": "Video Explanations",
-        "wyg_video_desc": "<ul class=\"wyg-points\"><li>Condensed simplified book explanation</li><li>Illustrations to ease studying</li><li>Discussion-style video format</li><li>Summary of any topic in 15 mins</li></ul>",
+        "wyg_video_desc": "<ul class=\"wyg-points\"><li>Condensed simplified book explanation</li><li>Illustrations to ease studying</li><li>Discussion-style explanation to keep you focused</li><li>Summary of any topic in 15 mins</li></ul>",
         "wyg_book_title": "The Book",
-        "wyg_book_desc": "<ul class=\"wyg-points\"><li>Designed exactly for the Egyptian Fellowship curriculum</li><li>Integrated with extra QBank info</li><li>Digital book to study from anywhere</li><li>Order hard copy delivered to your door</li></ul>",
+        "wyg_book_desc": "<ul class=\"wyg-points\"><li>Book matching the Egyptian Fellowship curriculum</li><li>Integrated with extra QBank info</li><li>Digital book to study from anywhere</li><li>Order hard copy delivered to your door</li></ul>",
         "wyg_qbank_title": "Question Bank",
         "wyg_qbank_desc": "<ul class=\"wyg-points\"><li>Top banks where exams come from</li><li>Solved with explanations for right and wrong answers</li><li>Full and realistic exam simulation</li><li>Smart review for memorized or wrong questions</li><li>Study by topic and chapter to practice step-by-step</li></ul>",
         "syllabus_title": "Content Index",
@@ -241,6 +243,8 @@
         "currency_egp": "EGP",
         "label_apk": "Direct Download",
         "btn_apk": "Download APK",
-        "apk_download_msg": "Press OK to start the download... then check your notification bar or downloads list."
+        "apk_download_msg": "Press OK to start the download... then check your notification bar or downloads list.",
+        "cta_support_text": "Or contact support to download",
+        "btn_whatsapp_cta": "Contact Support"
     }
 }
